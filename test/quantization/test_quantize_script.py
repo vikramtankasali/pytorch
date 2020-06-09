@@ -2276,6 +2276,9 @@ class TestQuantizeScriptPTSQOps(QuantizationTestCase):
                 x = self.relu(x)
                 x = F.relu(x)
                 x.relu_()
+                y = []
+                y.append(x)
+                x, _ = y
                 x = self.conv(x)
                 return x
 
